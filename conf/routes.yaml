@@ -1,0 +1,41 @@
+###########
+# visitor #
+###########
+
+index:
+  url: ""
+  controller: IndexController
+  action: doAction
+
+add:
+  url: add
+  controller: AddController
+  action: doAction
+
+letter:
+  url: letter/<let>
+  controller: IndexController
+  action: doAction
+  regexs:
+    let: "[[:alpha:]]"
+
+image:
+  url: get/<id>
+  controller: RetrieveImageController
+  action: doAction
+  regexs:
+    id: "\\d+"
+
+delete:
+  url: delete/<id>
+  controller: DeleteController
+  action: doAction
+  regexs:
+    id: "\\d+"
+
+sort:
+  url: sort/<word>
+  controller: AddController
+  action: doAction
+  regexs:
+    word: "[[:alpha:]]+"
